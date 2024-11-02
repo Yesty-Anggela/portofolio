@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfae8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            display: none; /* Default: hidden */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #493628;
+        }
+
+        input[type="reset"] {
+            background-color: #493628;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+
+        .switch-form {
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .code-scroll {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-top: 20px;
+            max-height: 150px; /* Atur tinggi maksimum untuk scroll */
+            overflow-y: auto; /* Mengaktifkan scroll vertikal */
+            white-space: pre; /* Menjaga format whitespace */
+            display: none; /* Default: hidden */
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FORM REGISTER -->
+    <div class="form-container" id="register-form">
+        <h2>Register</h2>
+        <form onsubmit="handleRegister(event)">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <div class="button-group">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div class="switch-form" onclick="showLogin()">Sudah punya akun? Masuk</div>
+    </div>
+
+    <!-- Sintaks Register -->
+    <div class="code-scroll" id="register-code">
+        <code>
+&lt;div class="form-container" id="register-form"&gt;
+&lt;h2&gt;Register&lt;/h2&gt;
+&lt;form onsubmit="handleRegister(event)"&gt;
+&lt;label for="name"&gt;Nama:&lt;/label&gt;
+&lt;input type="text" id="name" name="name" required&gt;
+
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+
+&lt;label for="register-password"&gt;Password:&lt;/label&gt;
+&lt;input type="password" id="register-password" name="password" required&gt;
+
+&lt;label for="confirm-password"&gt;Confirm Password:&lt;/label&gt;
+&lt;input type="password" id="confirm-password" name="confirm-password" required&gt;
+
+&lt;div class="button-group"&gt;
+    &lt;input type="submit" value="Register"&gt;
+    &lt;input type="reset" value="Reset"&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;div class="switch-form" onclick="showLogin()"&gt;Sudah punya akun? Masuk&lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </div>
+
+    <!-- Penjelasan untuk Form Register -->
+    <div>
+        <h3>Penjelasan untuk Form Register:</h3>
+        <p><strong>Tag <code>&lt;div&gt;</code>:</strong> Kontainer untuk elemen formulir pendaftaran.</p>
+        <p><strong>Tag <code>&lt;h2&gt;</code>:</strong> Menampilkan judul "Register".</p>
+        <p><strong>Tag <code>&lt;form&gt;</code>:</strong> Area input yang memanggil fungsi JavaScript saat disubmit.</p>
+        <p><strong>Label:</strong> Memberi konteks pada input yang relevan.</p>
+        <p><strong>Input:</strong> Field untuk nama, email, password, dan konfirmasi password.</p>
+        <p><strong>Button Group:</strong> Kontainer untuk tombol submit dan reset.</p>
+    </div>
+
+    <!-- FORM LOGIN -->
+    <div class="form-container" id="login-form">
+        <h2>Login</h2>
+        <form onsubmit="handleLogin(event)">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <div class="button-group">
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div class="switch-form" onclick="showRegister()">Belum punya akun? Daftar</div>
+    </div>
+
+    <!-- Sintaks Login -->
+    <div class="code-scroll" id="login-code">
+        <code>
+&lt;div class="form-container" id="login-form"&gt;
+&lt;h2&gt;Login&lt;/h2&gt;
+&lt;form onsubmit="handleLogin(event)"&gt;
+    &lt;label for="login-email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="login-email" name="email" required&gt;
+
+    &lt;label for="login-password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="login-password" name="password" required&gt;
+
+    &lt;div class="button-group"&gt;
+        &lt;input type="submit" value="Login"&gt;
+        &lt;input type="reset" value="Reset"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;div class="switch-form" onclick="showRegister()"&gt;Belum punya akun? Daftar&lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </div>
+
+    <!-- Penjelasan untuk Form Login -->
+    <div>
+        <h3>Penjelasan untuk Form Login:</h3>
+        <p><strong>Tag <code>&lt;div&gt;</code>:</strong> Kontainer untuk elemen formulir login.</p>
+        <p><strong>Tag <code>&lt;h2&gt;</code>:</strong> Menampilkan judul "Login".</p>
+        <p><strong>Tag <code>&lt;form&gt;</code>:</strong> Area input yang memanggil fungsi JavaScript saat disubmit.</p>
+        <p><strong>Label:</strong> Memberi konteks pada input yang relevan.</p>
+        <p><strong>Input:</strong> Field untuk email dan password.</p>
+        <p><strong>Button Group:</strong> Kontainer untuk tombol submit dan reset.</p>
+    </div>
+
+    <script>
+        // Menampilkan form register dan code scroll register secara default saat halaman dimuat
+        document.getElementById('register-form').style.display = 'block';
+        document.getElementById('register-code').style.display = 'block';
+    
+        function showRegister() {
+            document.getElementById('register-form').style.display = 'block';
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-code').style.display = 'block';
+            document.getElementById('login-code').style.display = 'none';
+        }
+    
+        function showLogin() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-code').style.display = 'block';
+            document.getElementById('register-code').style.display = 'none';
+        }
+    
+        function handleRegister(event) {
+            event.preventDefault();
+            // Logika untuk pendaftaran (simulasi)
+            alert('Pendaftaran berhasil!');
+        }
+    
+        function handleLogin(event) {
+            event.preventDefault();
+            // Logika untuk login (simulasi)
+            alert('Login berhasil!');
+            // Arahkan ke tutorial.html setelah login berhasil
+            window.location.href = 'tutorial.html'; // Pastikan file tutorial.html ada di direktori yang sama
+        }
+    </script>    
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Totorial Membuat Table</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #493628;
+            color: #fdfae8;
+        }
+
+        h1, h4 {
+            text-align: center;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        label {
+            color: #fdfae8;
+        }
+
+        .syntax-box {
+            max-height: 200px;
+            overflow-y: scroll;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-family: monospace;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Yesty</p><span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav_list">
+                    <a href="table.html" class="nav-link active-link">Cara membuat tabel</a>
+                </li>
+                <li class="nav_list">
+                    <a href="form.html" class="nav-link">Cara membuat form</a>
+                </li>
+                <li class="nav_list">
+                    <a href="tutorial.html" class="nav-link">Tutorial</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <a href="https://drive.google.com/file/d/1ZmjT3N_7gM81ihc_c9AuODQ5g4njUzJ3/view?usp=sharing" class="btn" target="_blank">
+                Download CV <i class="uil uil-file-alt"></i>
+            </a>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <br>
+    <h1>TUTORIAL MEMBUAT TABLE</h1>
+    <h4>Pertemuan ke-4</h4>
+
+    <p>
+        Pada bagian ini, kita akan belajar membuat tabel sederhana dengan beberapa kolom yang berisi nama dan usia. 
+        Di bawah ini, Anda bisa melihat contoh sintaks tabel tersebut.
+    </p>
+
+    <h3>Contoh Sintaks Tabel Sederhana:</h3>
+    <div class="syntax-box">
+        <pre>
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;First Name&lt;/th&gt;
+                &lt;th&gt;Last Name&lt;/th&gt;
+                &lt;th&gt;Age&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Messi&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+        </pre>
+    </div>
+    
+    <div style="text-align: center;">
+        <h4>Berikut Penjelasannya :</h4>
+        Tabel di atas dimulai dengan tag &lt;table&gt;, yang berfungsi untuk mendefinisikan sebuah tabel dalam HTML. Di dalam tabel, bagian &lt;thead&gt; digunakan untuk membuat header atau judul kolom. Dalam header ini, setiap kolom diwakili oleh tag &lt;th&gt;, yang merupakan singkatan dari "table header", di mana kita dapat melihat label untuk setiap kolom seperti "First Name," "Last Name," dan "Age." Di bawah header, terdapat bagian &lt;tbody&gt;, yang mendefinisikan isi dari tabel. Setiap baris data di dalam bagian ini diwakili oleh tag &lt;tr&gt; (table row), yang menandakan awal dari setiap baris. Di dalam setiap baris, tag &lt;td&gt; (table data) digunakan untuk menampilkan data yang relevan dengan kolom yang telah ditentukan sebelumnya. Misalnya, pada baris pertama, kita melihat data "Messi" di kolom "First Name," dengan kolom "Last Name" kosong dan "Age" bernilai 35. Dengan struktur ini, tabel dapat menyajikan informasi secara teratur dan mudah dipahami, sehingga memudahkan pembaca dalam memahami data yang ditampilkan.
+        <br>
+        <br>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Messi</td>
+                <td></td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Kane</td>
+                <td>Harry</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Kai</td>
+                <td></td>
+                <td>40</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <h1>DATA MAHASISWA</h1>
+    <h4>Universitas Teknologi Yogyakarta 2023/2024</h4>
+
+    <p>
+        Berikut Sintaks, dan penjelasan dari masing-masing fungsi Sintaks untuk tabel Data Mahasiswa.
+    </p>
+
+    <h3>Contoh Sintaks Tabel Data Mahasiswa:</h3>
+    <div class="syntax-box">
+        <pre>
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;NIM&lt;/th&gt;
+                &lt;th&gt;Nama Lengkap&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 1&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 2&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 3&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 4&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 5&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 6&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 7&lt;/th&gt;
+                &lt;th&gt;Ipk Semester 8&lt;/th&gt;
+                &lt;th&gt;Jurusan&lt;/th&gt;
+                &lt;th&gt;Fakultas&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;5220311034&lt;/td&gt;
+                &lt;td&gt;Yesty Anggela&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;Sistem Informasi&lt;/td&gt;
+                &lt;td&gt;Sains dan Teknologi&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;5220311004&lt;/td&gt;
+                &lt;td&gt;Mia Anggreini&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;Informatika&lt;/td&gt;
+                &lt;td&gt;Sains dan Teknologi&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;5220311000&lt;/td&gt;
+                &lt;td&gt;Yunita Valina&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;4,00&lt;/td&gt;
+                &lt;td&gt;Teknik Komputer&lt;/td&gt;
+                &lt;td&gt;Sains dan Teknologi&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+        </pre>
+    </div>
+
+    <div style="text-align: center;">
+        <h4> Berikut Penjelasannya :</h4>
+        Kode HTML yang ditampilkan dimulai dengan tag <code>&lt;table&gt;</code>, yang berfungsi untuk mendefinisikan struktur tabel dalam format baris dan kolom. Dalam tabel tersebut, ada bagian <code>&lt;thead&gt;</code> yang menyajikan header tabel, di mana judul kolom ditempatkan. Setiap baris dalam header dibentuk dengan tag <code>&lt;tr&gt;</code>, di mana setiap kolom diwakili oleh tag <code>&lt;th&gt;</code>, yang memberikan label pada data yang akan ditampilkan. Teks dalam tag ini umumnya ditampilkan dalam format tebal dan rata tengah.
+        <br>
+        Setelah header, ada tag <code>&lt;tbody&gt;</code> yang mendefinisikan isi tabel. Di bagian ini, setiap baris data juga menggunakan tag <code>&lt;tr&gt;</code>, dan di dalamnya terdapat beberapa tag <code>&lt;td&gt;</code> yang digunakan untuk mengisi data sesuai dengan kolom yang telah ditentukan di header. Sebagai contoh, pada baris pertama, terdapat informasi mengenai NIM, nama lengkap, dan IPK mahasiswa Yesty Anggela, serta jurusan dan fakultas yang diambilnya. Proses ini diulang untuk setiap mahasiswa yang ingin ditampilkan dalam tabel.
+        <br>
+        Akhir dari tabel ditandai dengan tag <code>&lt;/table&gt;</code>, yang menunjukkan bahwa tidak ada elemen tabel lainnya yang akan ditambahkan. Dengan struktur ini, tabel menyajikan informasi mengenai mahasiswa dengan cara yang teratur dan mudah dipahami, sehingga sangat efektif untuk menampilkan data akademis.
+        <br>
+        <br>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama Lengkap</th>
+                <th>Ipk Semester 1</th>
+                <th>Ipk Semester 2</th>
+                <th>Ipk Semester 3</th>
+                <th>Ipk Semester 4</th>
+                <th>Ipk Semester 5</th>
+                <th>Ipk Semester 6</th>
+                <th>Ipk Semester 7</th>
+                <th>Ipk Semester 8</th>
+                <th>Jurusan</th>
+                <th>Fakultas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5220311034</td>
+                <td>Yesty Anggela</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>Sistem Informasi</td>
+                <td>Sains dan Teknologi</td>
+            </tr>
+            <tr>
+                <td>5220311004</td>
+                <td>Mia Anggreini</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>Informatika</td>
+                <td>Sains dan Teknologi</td>
+            </tr>
+            <tr>
+                <td>5220311000</td>
+                <td>Yunita Valina</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>4,00</td>
+                <td>Teknik Komputer</td>
+                <td>Sains dan Teknologi</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
