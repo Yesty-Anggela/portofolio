@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <title>Tutorial</title>
+  <style>
+    /* Navbar styling */
+    nav {
+      position: sticky;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 90px;
+      line-height: 90px;
+      background: #ffffff;
+      padding-inline: 9vw;
+      transition: 0.3s;
+      z-index: 100;
+    }
+    .nav-logo {
+      position: relative;
+    }
+    .nav-name {
+      font-size: 30px;
+      font-weight: 600;
+      color: #493628;
+    }
+    .nav-logo span {
+      position: absolute;
+      top: -15px;
+      right: -20px;
+      font-size: 5em;
+      color: #7f5f50;
+    }
+    .nav-menu,
+    .nav_menu_list {
+      display: flex;
+    }
+    .nav-menu .nav_list {
+      list-style: none;
+      position: relative;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #7f5f50;
+      font-weight: 500;
+      padding-inline: 15px;
+      margin-inline: 20px;
+    }
+    .nav-button a {
+      color: #493628;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #493628;
+    }
+
+    /* Main Wrapper */
+    .wrapper {
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .top-header h1 {
+      font-size: 32px;
+      color: #493628;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Tutorial Box */
+    .tutorial-box {
+      background-color: #fdfae8;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tutorial-box h2 {
+      font-size: 24px;
+      color: #493628;
+      text-align: center;
+    }
+    .tutorial-box p {
+      font-size: 16px;
+      color: #6e5f51;
+    }
+    .tutorial-box h3 {
+      font-size: 18px;
+      color: #493628;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .editor {
+      width: 100%;
+      height: 200px;
+      background-color: #1d1d1d;
+      color: #d1d5db;
+      font-family: monospace;
+      padding: 10px;
+      border-radius: 8px;
+      resize: none;
+      border: none;
+    }
+    .run-button,
+    .undo-button {
+      background-color: #493628;
+      color: #fdfae8;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .preview {
+      background-color: #fdfae8;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      min-height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- --------------- HEADER --------------- -->
+  <nav id="header">
+    <div class="nav-logo">
+      <p class="nav-name">Yesty</p>
+      <span>.</span>
+    </div>
+    <div class="nav-menu" id="myNavMenu">
+      <ul class="nav_menu_list">
+        <li class="nav_list">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="index.html#about" class="nav-link">About</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="index.html#projects" class="nav-link">Projects</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="tutorial.html" class="nav-link active-link">Tutorial</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="index.html#contact" class="nav-link">Contact</a>
+          <div class="circle"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-button">
+      <a href="https://drive.google.com/file/d/1ZmjT3N_7gM81ihc_c9AuODQ5g4njUzJ3/view?usp=sharing" class="btn" target="_blank">
+        Download CV <i class="uil uil-file-alt"></i>
+      </a>
+    </div>
+    <div class="nav-menu-btn">
+      <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+    </div>
+  </nav>
+  
+  
+  <!-- Main Content -->
+  <main class="wrapper" id="tutorial">
+    <section class="section">
+      <div class="top-header">
+        <h1>Tutorial CSS Basics</h1>
+      </div>
+      <div class="tutorial-box">
+        <h2>Membuat Canvas HTML</h2>
+        <p>
+          Elemen canvas adalah area kosong yang digunakan untuk membuat berbagai grafik secara dinamis langsung di halaman web. Dengan dukungan JavaScript, canvas bisa menjadi sarana untuk membuat gambar, grafik, animasi, dan elemen interaktif yang memungkinkan pengguna berinteraksi langsung dengan konten.
+        </p>
+        <h3>Code:</h3>
+        <textarea class="editor" rows="3" id="inlineCode" placeholder="">
+ <!DOCTYPE html>
+ <html>
+ <link rel="stylesheet" href="assets/css/style.css" />
+ <body>    
+ <p>Pilih gambar:</p>
+ <img id="gambar" src="assets/images/gambarcanvas.jpeg" alt="" width="220" height="277">
+ <p>Mengisi :</p>
+ <canvas id="kanvas" width="220" height="277" style="border:1px solid #797474;">
+    Your browser does not support the HTML5 canvas tag.
+ </canvas>
+ <p><button onclick="kanvas()">Try it</button></p>
+ </body>
+ </html>
+                
+        </textarea>
+        <button class="run-button" onclick="runInlineCode()">Run</button>
+        <button class="undo-button" onclick="undoInlineCode()">Undo</button>
+        <h3>Hasil:</h3>
+        <div class="preview" id="previewInline"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript for Run and Undo functionality -->
+  <script>
+    let inlineCodeHistory = [];
+
+    function runInlineCode() {
+      const code = document.getElementById("inlineCode").value;
+      document.getElementById("previewInline").style.backgroundColor = "#fdfae8";
+      document.getElementById("previewInline").innerHTML = code;
+      inlineCodeHistory.push(code);
+    }
+
+    function undoInlineCode() {
+      if (inlineCodeHistory.length > 1) {
+        inlineCodeHistory.pop();
+        const previousCode = inlineCodeHistory[inlineCodeHistory.length - 1];
+        document.getElementById("inlineCode").value = previousCode;
+        document.getElementById("previewInline").innerHTML = previousCode;
+      }
+    }
+
+    // JavaScript function to draw the image on canvas
+    function kanvas() {
+      const c = document.getElementById("kanvas");
+      const ctx = c.getContext("2d");
+      const img = document.getElementById("gambar");
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+    }
+  </script>
+</body>
+</html>
